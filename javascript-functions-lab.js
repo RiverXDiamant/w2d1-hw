@@ -131,7 +131,19 @@ console.log(reverseString("rockstar")); // output: ratskcor
 // 8.
 //  a. Define a function, as a function expression, longestStringInArray
 //  b. That takes an array of strings as an argument and returns the length of the longest string.
-
+let array = ["Pumpkin", "Apple", "Peach", "Plum"];
+const longestStringInArray = array.reduce((a, b, c, d) =>
+  a.length > b.length
+    ? a
+    : b || b.length > c.length
+    ? b
+    : c || c.length > d.length
+    ? c
+    : d || d.length
+    ? d
+    : d
+);
+console.log(longestStringInArray); // output: Pumpkin
 // 9.
 //  a.  Define a function, as a function declaration, stringsLongerThan
 //  b.  That takes an array of strings and a number as arguments, and returns an array of the strings that are longer than the number passed in.
