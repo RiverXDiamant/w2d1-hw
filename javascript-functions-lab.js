@@ -24,8 +24,9 @@ function maxOfTwoNumbers(x, y) {
   // return  x >= y ? x : y;
 }
 
-console.log(maxOfTwoNumbers(3, 9));
-
+console.log(maxOfTwoNumbers(3, 9)); // output: 9
+//
+//
 // 2.
 //  a. Define a function, as a function expression, maxOfThree
 //  b. That takes three numbers as arguments
@@ -57,8 +58,9 @@ console.log(maxOfTwoNumbers(3, 9));
 //Using Ternary Operator
 const maxOfThree = (a, b, c) => (a >= c ? a : c, b >= c ? b : c, c ? c : c);
 
-console.log(maxOfThree(4, 17, 27));
-
+console.log(maxOfThree(4, 17, 27)); // output: 27
+//
+//
 // 3.
 //  a. Define a function, as a function declaration, isCharAVowel
 //  b. Takes a character as an argument
@@ -77,9 +79,10 @@ function isCharAVowel(arg) {
   return false;
 }
 
-isCharAVowel("e");
-isCharAVowel("z");
-
+isCharAVowel("e"); // output: True
+isCharAVowel("z"); // output: False
+//
+//
 // 4.
 //  a. Define a function, as a function expression, sumArray
 //  b. That takes an array of numbers and returns the sum of those numbers. (For example, sumArray([2, 4, 5]);would return 11.)
@@ -88,27 +91,39 @@ isCharAVowel("z");
 // in order, passing in the return value from the calculation on the preceding element.
 // The final result of running the reducer across all elements of the array is a single value.
 
-const sumArray = [49, 78, 84].reduce((firstSum, a) => firstSum + a);
-console.log(sumArray);
-
+const sumArray = [49, 78, 84].reduce(
+  (firstSum, totalSum) => (firstSum += totalSum)
+);
+console.log(sumArray); // output: 211
+//
+//
 // 5.
 //  a. Define a function, as a function declaration, multiplyArray
 //  b. That takes an array of numbers and returns the product of those numbers. (For example, multiplyArray([2, 4, 5]);would return 40.)
 const arr = [49, 78, 84].reduce(multiplyArray);
 
-function multiplyArray(sum, a) {
-  return sum * a;
+function multiplyArray(arrSum, sumProduct) {
+  return arrSum * sumProduct;
 }
-console.log(arr);
+console.log(arr); // output: 321048
+//
+//
 // 6.
 //  a. Define a function, as a function expression, numArgs
 //  b. That returns the number of arguments passed to the function when called.
+const numArgs = (...args) => {
+  return args.length;
+};
+console.log(numArgs(49, 78, 84, 90, 207, 2038)); // output: 6
 
+//
 // 7.
 //  a. Define a function, as a function declaration, reverseString
 //  b. That takes a string, reverses the characters, and returns it.
 //     (For example, reverseString('rockstar');would return the string "ratskcor".)
 
+//
+//
 // 8.
 //  a. Define a function, as a function expression, longestStringInArray
 //  b. That takes an array of strings as an argument and returns the length of the longest string.
