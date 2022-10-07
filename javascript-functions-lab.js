@@ -67,7 +67,7 @@ console.log(maxOfThree(4, 17, 27));
 //
 function isCharAVowel(arg) {
   const vowel = "a, e, i, o, u";
-  for (var i = 0; i < vowel.length; i++) {
+  for (let i = 0; i < vowel.length; i++) {
     if (arg === vowel[i]) {
       console.log("True");
       return true;
@@ -83,6 +83,13 @@ isCharAVowel("z");
 // 4.
 //  a. Define a function, as a function expression, sumArray
 //  b. That takes an array of numbers and returns the sum of those numbers. (For example, sumArray([2, 4, 5]);would return 11.)
+//
+// notes: reduce() method executes a user-supplied "reducer" callback function on each element of the array,
+// in order, passing in the return value from the calculation on the preceding element.
+// The final result of running the reducer across all elements of the array is a single value.
+
+const sumArray = [49, 78, 84].reduce((firstSum, a) => firstSum + a);
+console.log(sumArray);
 
 // 5.
 //  a. Define a function, as a function declaration, multiplyArray
