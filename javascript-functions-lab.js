@@ -94,7 +94,12 @@ console.log(sumArray);
 // 5.
 //  a. Define a function, as a function declaration, multiplyArray
 //  b. That takes an array of numbers and returns the product of those numbers. (For example, multiplyArray([2, 4, 5]);would return 40.)
+const arr = [49, 78, 84].reduce(multiplyArray);
 
+function multiplyArray(sum, a) {
+  return sum * a;
+}
+console.log(arr);
 // 6.
 //  a. Define a function, as a function expression, numArgs
 //  b. That returns the number of arguments passed to the function when called.
