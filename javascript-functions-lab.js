@@ -121,7 +121,11 @@ console.log(numArgs(49, 78, 84, 90, 207, 2038)); // output: 6
 //  a. Define a function, as a function declaration, reverseString
 //  b. That takes a string, reverses the characters, and returns it.
 //     (For example, reverseString('rockstar');would return the string "ratskcor".)
+function reverseString(str) {
+  return str.split("").reverse().join("");
+}
 
+console.log(reverseString("rockstar")); // output: ratskcor
 //
 //
 // 8.
